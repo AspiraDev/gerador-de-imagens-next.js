@@ -1,6 +1,6 @@
 module.exports = {
     images: {
-      domains: ['desaparecidos.policiacivil.mg.gov.br'],
-      domains: ['www.placemonkeys.com'],
+      domains: ['desaparecidos.policiacivil.mg.gov.br', 'www.placemonkeys.com'],
+      
     },
    }
