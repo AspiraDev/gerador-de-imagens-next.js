@@ -1,7 +1,15 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-export default function Home() {
-  return (
+const aleatorio = Math.floor(Math.random() * 500 + 1000)
+
+
+
+export default function IndexPage() {
+
+        return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
@@ -10,49 +18,33 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Bem vindo ao gerador de imagens
+          Bem vindo ao gerador de 🐒
         </h1>
 
-        <p className="description">
-         Comece escolhendo uma opção:
-        </p>
+        <div style={{borderRadius: '15px', overflow: 'hidden'}}>
+
+        
+        <Image
+     
+      src={"https://www.placemonkeys.com/" + aleatorio}
+      alt="Picture of the author"
+      width={500}
+      height={500}
+    />
+
+
+      </div>
 
         <div className="grid">
+          <a href="http://localhost:3000/macacos"  className="card">
+            <h3>Gerar</h3>
+            
+          </a></div>
 
-
-          <a href="/desaparecidos" className="card">
-            <h3>Desaparecidos &rarr;</h3>
-            <p>Esta opção gera imagens aleatórias de desaparecidos do estado de MG.</p>
-          </a>
-
-          <a
-            href="/procurados" className="card">
-            <h3>Procurados (EM BREVE) &rarr;</h3>
-            <p>Esta opção gera imagens aleatórias de procurados do estado de SP.</p>
-          </a>
-
-          <a href="/macacos" className="card">
-            <h3>Gerador de Macacos &rarr;</h3>
-            <p>Esta opção gera imagens de macacos aleatórios.</p>
-          </a>
-
-          <a
-            href=""
-            className="card">
-            <h3>Gerador de Pessoas (EM BREVE) &rarr;</h3>
-            <p>
-            Esta opção gera imagens de rostos fictícios.
-            </p>
-          </a>
-        </div>
+ 
       </main>
 
-      <footer>
   
-          Feito por Aspirante
-         
-        
-      </footer>
 
       <style jsx>{`
         .container {
@@ -64,65 +56,36 @@ export default function Home() {
           align-items: center;
         }
 
+        .macaco{
+            border-radius: 80px;
+        }
+
         main {
-          padding: 0rem 0;
+          
           flex: 1;
+          padding-top: 0px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
         }
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
 
         a {
           color: inherit;
           text-decoration: none;
         }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
 
         .title {
-          margin: 0;
-          line-height: 1.15;
+          margin-top: 1%;
+          
           font-size: 4rem;
         }
 
-        .title,
-        .description {
-          text-align: center;
-        }
 
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
+
+
 
         code {
           background: #fafafa;
@@ -134,25 +97,27 @@ export default function Home() {
         }
 
         .grid {
-          
           display: flex;
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
 
           max-width: 800px;
-          margin-top: 20px;
+          margin-top: 3rem;
         }
 
         .card {
-          margin: 1rem;
+          
           flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
+          padding: 0.2rem;
+          text-align: center;
           color: inherit;
+          width: 250px;
+          height: 50px;
           text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
+          border-color: #0070f3;
           transition: color 0.15s ease, border-color 0.15s ease;
         }
 

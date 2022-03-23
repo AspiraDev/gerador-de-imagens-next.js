@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const aleatorio = Math.floor(Math.random() * 500 + 1)
+const aleatorio = Math.floor(Math.random() * 500 + 1000)
 
 
 
@@ -18,7 +18,7 @@ export default function IndexPage() {
 
       <main>
         <h1 className="title">
-          Bem vindo ao gerador de 🐒
+          Ajude a Encontrar Um Desaparecido
         </h1>
 
         <div style={{borderRadius: '15px', overflow: 'hidden'}}>
@@ -26,7 +26,7 @@ export default function IndexPage() {
         
         <Image
      
-      src={"https://www.placemonkeys.com/" + aleatorio}
+      src={"https://desaparecidos.policiacivil.mg.gov.br/arquivo/downloadArquivo/ver_" + aleatorio}
       alt="Picture of the author"
       width={500}
       height={500}
@@ -36,7 +36,7 @@ export default function IndexPage() {
       </div>
 
         <div className="grid">
-          <a href="http://localhost:3000/macacos"  className="card">
+          <a href="http://localhost:3000/desaparecidos"  className="card">
             <h3>Gerar</h3>
             
           </a></div>
