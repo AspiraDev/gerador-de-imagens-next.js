@@ -36,7 +36,7 @@ export default function IndexPage() {
       </div>
 
         <div className="grid">
-          <a href="http://localhost:3000/macacos"  className="card">
+          <a href="https://gerador-de-imagens-chi.vercel.app/macacos"  className="card">
             <h3>Gerar</h3>
             
           </a></div>
